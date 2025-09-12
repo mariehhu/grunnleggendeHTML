@@ -5,6 +5,9 @@
 
 }
 
+*{
+    box-sizing: border-box;
+}
 
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -44,14 +47,58 @@ a{
     text-decoration: none;
 }
 
-/*HERO-seksjon*/
+/*HERO-sekstion*/
 
 .deal-section{
+    background-image: url(https://picsum.photos/id/237/1200/500);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
     background-color:var(--main-gray);
     padding: 1rem;
+    position: relative;
+    height:50vh;
+    min-height: 200px;
+
+    /*
+    img{
+      
+        width: 100%;
+    }
+
+    h2, p, a{
+        position:absolute;
+    }
+
+    p{
+        top: 130px;
+    }
+
+    a{
+        top: 190px;
+        left: 15px;
+    }
+*/
+
 }
 
-/*HOVEDINNHOLD*/
+/*  ============HOVEDINNHOLD============  */
+
+main{
+    max-width: 1200px;
+    width: 100%;
+    margin: 1rem auto;
+
+    section{
+        h2{
+            text-align: center;
+        }
+
+        article{
+            margin: 0 auto;
+        }
+    }
+}
 
 article{
     margin: 1rem 0 3rem;
@@ -81,4 +128,31 @@ h2{
     color: #fff;
     padding: 1rem; 
     border: none;
+}
+
+.side-container{
+    background-color: var(--main-gray);
+    padding: 1rem;
+
+    form{
+
+        input{
+            display: block;
+            padding: 0.5rem;
+            margin: 0.4rem 0;
+        }
+    }
+}
+
+.age-check{
+    display: flex;
+    align-items: center;
+
+}
+
+footer{
+    background-color: #ff4680;
+    color: #fdeaf3;
+    padding: 1rem;
+    min-height: 150px;
 }
