@@ -1,12 +1,39 @@
+:root{
+    --main-pink: #ff4680;
+    --light-pink: #fc9fc7;
+    --main-gray: #fdeaf3;
+
+}
+
+
 body{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
  }
 
+/* GLOBAL HEADER*/
+#global-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 
+    nav{
+        ul{
+            padding: 0;
+            margin: 0;
+
+            li{
+                list-style: none;
+                display: inline-block;
+            }
+        }
+    }
+}
 
 #mainlogo{
      font-size: 30px;
-    font-family: monospace;
+    font-family: Helvetica, sans-serif;
     font-weight: 900;
     color: #ff4680;
     text-decoration: none;
@@ -15,6 +42,13 @@ body{
 a{ 
     color: #000;
     text-decoration: none;
+}
+
+/*HERO-seksjon*/
+
+.deal-section{
+    background-color:var(--main-gray);
+    padding: 1rem;
 }
 
 /*HOVEDINNHOLD*/
@@ -46,4 +80,5 @@ h2{
     background-color: #ff4680;
     color: #fff;
     padding: 1rem; 
+    border: none;
 }

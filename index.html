@@ -10,7 +10,8 @@
   </head>
   <body>
     <!--dette er en kommentar og vises ikke på nettstedet-->
-    <header>
+    <header id="global-header">
+
         <a href="index.html" id="mainlogo">LOGO</a>
         <nav>
             <ul>
@@ -20,12 +21,14 @@
             </ul>            
         </nav>
     </header>
-    <section>
+    
+    <section class="deal-section">
         <h2>Crazy Gaming Deals</h2>
         <img src="https://picsum.photos/id/237/200/300" alt="En hund">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
         <a href="offers.html">Se tilbud</a>
     </section>
+   
     <main>
         <section>
             <h2>Populære Spæll</h2>
@@ -103,7 +106,7 @@
              <input type="email" placeholder="ola.nordman@hiof.no">
             </label>
             
-            <input type="submit" value="Meld meg på" />
+            <input class="btn" type="submit" value="Meld meg på" />
             
             <label for="age-validation">Bekreft alder over 18 år</label>
             
