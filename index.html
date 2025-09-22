@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="icons/css/fontawesome.css" rel="stylesheet" />
+    <link href="icons/css/brands.css" rel="stylesheet" />
+    <link href="icons/css/solid.css" rel="stylesheet" />
+    <link href="icons/css/sharp-thin.css" rel="stylesheet" />
+    <link href="icons/css/sharp-duotone-thin.css" rel="stylesheet" /> 
 
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 
@@ -19,6 +24,8 @@
                 <li><a href="index.html">Hjem</a> </li>
                 <li><a href="products.html">Produkter</a></li>
                 <li><a href="hjelp.html">Hjelp</a></li>
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li><i class="fa-solid fa-bars"></i></li>
             </ul>            
         </nav>
      </header>
@@ -33,10 +40,10 @@
      </section>
    
      <main>
-        <section>
-            <h2>Populære Spæll</h2>
+        <section class="flex-container flex-grow">
+            <h2>Populære Spæll </h2>
             
-            <article>
+            <article class="product-card">
                 <img 
                 src="https://picsum.photos/id/237/200/300" 
                 alt="Animal Crossing: New Leaf"
@@ -47,7 +54,7 @@
                 <a href="product.html" class="btn">Se produkt</a>
             </article>
             
-            <article>
+            <article class="product-card">
                 <img 
                 src="https://picsum.photos/id/237/200/300" 
                 alt="Animal Crossing: New Leaf"
@@ -58,7 +65,7 @@
                 <a href="product.html" class="btn">Se produkt</a>
             </article>
 
-                <article>
+            <article class="product-card">
                 <img 
                 src="https://picsum.photos/id/237/200/300" 
                 alt="Animal Crossing: New Leaf"
@@ -69,7 +76,7 @@
                 <a href="product.html" class="btn">Se produkt</a>
             </article>
 
-                <article>
+            <article class="product-card">
                 <img 
                 src="https://picsum.photos/id/237/200/300" 
                 alt="Animal Crossing: New Leaf"
@@ -79,23 +86,25 @@
                 <P>499kr</P>
                 <a href="product.html" class="btn">Se produkt</a>
             </article>
+
         </section>
-        <section>
+
+        <section class="flex-container flex-grow">
             <h2>Kategorier</h2>
 
-            <article>
+            <article class="grow-1 catagory-card">
                 <h3><a href="nintendo.html">Nintendo</a></h3>
             </article>
             
-            <article>
+            <article class="catagory-card">
                     <h3><a href="playstation.html">Playstation</a></h3>
             </article>
             
-            <article>
+            <article class="catagory-card">
                 <h3><a href="xbox.html">XBOX</a></h3>
             </article>
             
-            <article>
+            <article class="grow-2 catagory-card">
                 <h3><a href="sega.html">SEGA</a></h3>
             </article>
            

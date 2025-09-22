@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+
 :root{
     --main-pink: #ff4680;
     --light-pink: #fc9fc7;
@@ -10,7 +13,7 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Noto Sans Mono", sans-serif;
     margin: 0;
  }
 
@@ -32,11 +35,9 @@ body{
     align-items: center;
     padding: 1rem;
     /*grid-area: header; */
-    grid-column-start: 1;
-    grid-column-end: 2;
-
-    grid-row-start: 1;
-    grid-row-end: 2;
+   
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 
     nav{
         ul{
@@ -51,9 +52,13 @@ body{
     }
 }
 
+.fa-bars{
+    display: inline-block;
+}
+
 #mainlogo{
      font-size: 30px;
-    font-family: Helvetica, sans-serif;
+    font-family: "Noto Sans Mono", sans-serif;
     font-weight: 900;
     color: #ff4680;
     text-decoration: none;
@@ -78,11 +83,14 @@ a{
     min-height: 200px;
     /*grid-area: hero;*/
 
-    grid-column-start: 1;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    /*grid-column-start: 1;
     grid-column-end: 2;
 
     grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: 3; */
 
     /*
     img{
@@ -112,13 +120,8 @@ main{
     max-width: 1200px;
     width: 100%;
     margin: 1rem auto;
-    /*grid-area: main;*/
-
-    grid-column-start: 1;
-    grid-column-end: 2;
-
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
 
     section{
         h2{
@@ -135,15 +138,25 @@ article{
     margin: 1rem 0 3rem;
     color: #ff4680;
     border:1px solid #afafaf;
-    max-width: 400px; 
+    width: 31%;
     width: 100%;
     min-width: 250px;
     padding: 1rem;
+    flex-grow: 1;
+    max-width: 800px;
+
 
     img{
         width: 100%; 
+        height: auto;
     }
 }
+
+.category-card{
+    width: 33%;
+    flex-grow: 1;
+}
+
 
 p{
     color: #fc9fc7
@@ -219,6 +232,10 @@ footer{
             grid-column-end: 4;
         }
 
+    .fa-bars{
+        display: none;
+    }
+
     .deal-section{
         grid-column-end: 4;
     }
@@ -240,4 +257,107 @@ footer{
         grid-row-end: 5;
     }
 
+    article{
+    margin: 1rem 0 3rem;
+    color: #ff4680;
+    border:1px solid #afafaf;
+    width: 31%;
+    width: 100%;
+    min-width: 250px;
+    padding: 1rem;
+    flex-grow: 1;
+    max-width: 800px;
+
+
+        img{
+            width: 100%; 
+            height: auto;
+        }
+    }
+
+    .category-card{
+    width: 33%;
+    flex-grow: 0;
+
+    }
+
+    .flex-grow1{
+    flex-grow: 1;
+    }
+
+    .flex-grow2{
+    flex-grow: 2;
+    }   
+
 }
+
+/*=========================FLEXBOX JEG VET IKKE HVA JEG GKØR (KOPIERT FRA GITHUB)=======================*/
+
+  /*
+    .flex-container
+    HVA: Fleksibel kort-layout som kan bryte til nye rader.
+    HVORDAN: Flex-wrap + gap; h2 tar full bredde; artikler vokser etter plass.
+    HVORFOR: Enkel, responsiv kort-grid uten kompliserte regler.
+  */
+
+  .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .flex-container h2{
+    width: 100%;
+  }
+
+  .flex-container article{
+    min-width: 200px !important;  /* OBS: !important bør brukes sparsomt */
+    margin: 0;
+   
+  }
+  
+  /*
+    section.flex-grow
+    HVA: Variant der kort kan vokse mer og radjusteringen starter til venstre.
+    HVORDAN: Justify-start; artikler får bredde-prosent for 3 i rad ved plass.
+    HVORFOR: Tettere kortgrid på bredere skjermer.
+  */
+  section.flex-grow{
+    justify-content: flex-start;
+  }
+
+  
+  section.flex-grow article{
+    max-width: 900px;
+    min-width: 100px;
+    width: 31%;        /* ~3 per rad med gap 
+  }
+
+  section.flex-grow article.grow-1{
+    flex-grow: 2;
+  }
+  
+  /*
+    Utility-klasser for vekst
+    HVA: Små hjelpeklasser som endrer flex-grow.
+    HVORDAN: Påfør på valgte kort/containere.
+    HVORFOR: Gir kontroll på plassdistribusjon uten nye spesifikke regler. */
+
+  .grow-1{ flex-grow: 2; }
+  .grow-2{ flex-grow: 3; }
+
+  }
+
+  
+  .fa-bars{
+    font-size: 30px;
+    color: #fc9fc7;
+    font-weight: 300;
+  }
+
+  .fa-magnifying-glass{
+    font-size: 30px;
+    color: #fc9fc7;
+    font-weight: 300;
+  }
