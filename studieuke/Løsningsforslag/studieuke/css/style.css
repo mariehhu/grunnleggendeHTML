@@ -14,6 +14,7 @@ a{
     display: inline-block;
     color: #000;
     text-decoration: none;
+    padding: 1rem;
 
 }
 
@@ -29,7 +30,7 @@ img{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        box-shadow: 0px 4px 9px #c4c4c4;
+        box-shadow: 0px 4px 9px #e0e0e0;
         padding: 1rem;
     }
 }
@@ -45,32 +46,66 @@ img{
 }
 
 .highlight{
-    padding: 1rem;
+    padding: 0rem;
+    display: flex;
+    flex-wrap: wrap;
 
+    >*{
+        width: 50%;
+        min-width: 350px;
+        flex-grow: 1;
+    }
 
     figure{
         margin: 0;
+
+        img{
+            height: 100%;
+        }
     }
+
+    section{
+        padding: 1rem;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.highlight:nth-child(even){
+    flex-direction: row-reverse;
 }
 
 #services{
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
+    justify-content: center;
+    background-color: #c4c4c4;
     
     h2{
         width: 100%;
     }
 
     .service-card{
-        width: 100%;
+        width: 33%;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        min-width: 250px;
+        flex-grow: 1;
+       /*max-width: 400px;*/
+
 
         i{
-            width: 50px;
-            height: 50px;
+            min-width: 50px;
+            min-height: 50px;
             padding: 0.5rem;
             border-radius: 100%;
             border: 1px solid #000;
+            display: flex;
             align-items: center;
             justify-content: center;
         }
@@ -88,12 +123,45 @@ img{
     display: none;
 }
 
+#menu{
+   list-style: none;
+   margin: 0;
+
+   li:first-child{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+   }
+}
+
+#close{
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+}
+
 .icon-btn{
     background-color: transparent;
     border: none;
 
     i{
         font-size: 18px;
+    }
+}
+
+@media only screen and (min-width:789px){
+    
+    #services{
+        h2{
+            text-align: center;
+        }
+    }
+    .service-card{
+        max-width: 400px;
+        flex-direction: column;
+        text-align: center;
     }
 }
 
@@ -133,12 +201,19 @@ img{
         display: inline-block;
     }
 
+    .btn:hover{
+        background-color: rgb(255, 132, 179);
+    }
+
     /* Menyen tilpasset desktop: liste horisontalt */
     #menu{
-        ul{
-            display: flex; /* Viser menyvalg på linje */
-            gap: 1rem;     /* Avstand mellom menyvalg */
+        display: flex; /* Viser menyvalg på linje */
+        gap: 1rem;     /* Avstand mellom menyvalg */
+
+        li a:hover{
+            text-decoration: underline;
         }
+        
     }
 
     /* Hamburger-knappen skjules på større skjermer */
@@ -147,6 +222,10 @@ img{
     }
 
     #close{
+        display: none;
+    }
+
+    .group{
         display: none;
     }
 
